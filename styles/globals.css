@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+} 
+
+
+nav{
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 20%;
+}
+
+button:hover{
+    background-color: lightgrey;
+    color: black;
+}
+
+.logo_text{
+    font-size: 40px;
+}
+
+.btn{
+  display:flex;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-out{
+  margin: 0rem;
+}
+
+.profile-img{
+  margin-right: 2rem;
+}
+
+
+.home-main{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
+  height: 80vh;
+  gap: 2vh;
+}
+
+
+h1{
+  font-size: 8vh;
+}
+h2{
+  font-size: 5vh;
+}
+h3{
+  font-size: 4vh;
+}
+h4{
+  font-size: 3vh;
+}
+h5{
+  font-size: 2vh;
+}
+
+.perw60{
+  width: 70%;
+}
+
+.guest-container{
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center; 
+  padding: 5vh;
+}
+
+
+.dropdown_link{
+  display:flex;
+  text-align: right;
+  padding-top: .5vh;
+  
+
+}
+
+.mobile-profile{
+  margin-right: 0;
+}
+
+.dropdown{
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column; 
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  min-width: 140px;
+}
+.dropdown > button{
+  width: 120px;
+
+}
+
+
+
+
+.create-quiz-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh;
+  align-items: center;
+  gap: 2vh;
+}
+
+.quiz-textarea{
+  width: 70vw;
+  height: 60vh;
+  border: 2px solid black;
+}
+
+.create-quiz-button{
+  width:200px;
+  height: 50px;
+  background-color: #72A0C1;
+ 
+}
+.quiz-title{
+  border: 2px solid black;
+  border-radius: 5%;
+  width: 250px;
+  margin-left: 1vw;
+  margin-right: 5vw;
+}
+
+.your-quizzes{
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.your-quizzes-title{
+  text-align: center
+}
+
+.quizcard{
+  text-align: center;
+  width: 25vw;
+  height: 300px;
+  background-color: white;
+  margin: 5vh 2vw 0 2vw;
+  border-radius: 5%;
+}
+
+.quizzes{
+  background-color: lightgrey;
+  width: 100vw;
+  
+}
+.quizcard-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: bottom;
+  justify-content:space-around;
+
+  
+}
+.quizcard-button{
+  width:100px;
+  height: 30px;
+  background-color: Black;
+  color: white;
+}
+.quizcard-button:hover{
+  background-color: lightgrey;
+}
