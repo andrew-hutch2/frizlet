@@ -13,7 +13,6 @@ const Quizzes = () => {
     }
     fetchQuizzes();
     }, []);
-    console.log(quizzes)
   return (
     <section className='quizzes'>
         <h2 className='your-quizzes-title'> Your Quizzes</h2>

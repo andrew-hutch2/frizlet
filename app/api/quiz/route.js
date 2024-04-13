@@ -1,11 +1,12 @@
 import {connectToDB} from '@utils/database';
 import Quiz from '@models/quiz'
-import {getServerSession} from 'next-auth';
+import {getServerSession} from 'next-auth/next';
 /* import { handler } from "../auth/[...nextauth]/route"; */
 import {handler} from "../auth/[...nextauth]/route";
 
 
-export const GET = async (req) => {
+export const GET = async (req, res) => {
+    /* console.log("this is the session", session) */
     try{
     
         /* const session = await getServerSession(handler);
@@ -14,7 +15,7 @@ export const GET = async (req) => {
 
         /* const quizzes = await Quiz.find({}).populate('creator'); */
         const quizzes = await Quiz.find({})
-        console.log(quizzes)
+        /* console.log(quizzes) */
         return new Response(JSON.stringify(quizzes), {
             status: 200
         })
