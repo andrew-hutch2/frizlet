@@ -295,3 +295,8 @@ h5{
 .answer-question{
   
 }
+
+/* margin bottom */
+.mb{
+  margin-bottom: auto;
+}

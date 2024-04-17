@@ -13,9 +13,9 @@ function FlashCards({quiz}) {
   /* useEffect(() => {
       setShowAnswer(false);
     },[quizIndex]) */
-    console.log(quizIndex);
+    /* console.log(quizIndex); */
   function increment_up(){
-    if(quizIndex + 1 < questions.length && questions){
+    if((quizIndex + 1) < questions.length && questions){
       setQuizIndex(prev => prev += 1)
       setShowAnswer(false);
     }else{
@@ -25,10 +25,13 @@ function FlashCards({quiz}) {
     
   }
   function increment_down(){
-    if(quizIndex - 1 > 0 && questions){
+    if((quizIndex - 1) > 0 && questions){
+      /* console.log("in the update function", quizIndex) */
       setQuizIndex(prev => prev -= 1)
+      console.log("in the update function", quizIndex)
       setShowAnswer(false);
     }else{
+      /* console.log(questions) */
       setQuizIndex(questions.length - 1);
       setShowAnswer(false);
     }
@@ -39,13 +42,12 @@ function FlashCards({quiz}) {
 
 
   //shortcut code
-  const handleKeyPress = useCallback((event) => {
-    console.log(event.key);
+  /* const handleKeyPress = useCallback((event) => {
     if(event.key == " "){
       setShowAnswer(prev => !prev); 
-    }else if(quizIndex + 1 < questions.length && (event.key == "l" || event.key == "ArrowRight")){
+    }else if(event.key == "l" || event.key == "ArrowRight"){
       increment_up();
-    }else if(quizIndex - 1 > 0 && (event.key == "j" || event.key == "ArrowLeft")){
+    }else if(event.key == "j" || event.key == "ArrowLeft"){
       increment_down();
     }
   }, []);
@@ -58,7 +60,8 @@ function FlashCards({quiz}) {
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
-  }, [handleKeyPress]);
+  }, [handleKeyPress]); 
+  */
    
   return (
     <div className="flashcards-container">
