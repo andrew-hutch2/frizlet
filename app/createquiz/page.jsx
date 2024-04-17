@@ -9,7 +9,6 @@ const { data: session } = useSession();
 
 const [formData, setFormData] = useState({flashcards: "", title: ""})
 const router = useRouter();
-console.log(formData)
 const handleSubmit = async(e) => {
   e.preventDefault();
   let a = formData.flashcards.split("\n")

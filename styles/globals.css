@@ -182,13 +182,20 @@ h5{
 }
 
 .quizcard{
+  display:flex;
+  flex-direction: column;
   text-align: center;
-  width: 25vw;
-  height: 300px;
+  min-width: 25vw;
+  max-width: 25vw;
+  min-height: 300px;
+  height: auto;
+  padding-bottom: 1vh;
   background-color: white;
   margin: 5vh 2vw 0 2vw;
   border-radius: 5%;
 }
+
+
 
 .quizzes{
   background-color: lightgrey;
@@ -198,14 +205,13 @@ h5{
 .quizcard-buttons{
   display: flex;
   flex-direction: row;
-  align-items: bottom;
   justify-content:space-around;
-
+  align-self: stretch;
   
 }
 .quizcard-button{
-  width:100px;
-  height: 30px;
+  width:6vw;
+  height: 35px;
   background-color: Black;
   color: white;
 }
@@ -219,6 +225,35 @@ h5{
   height: 100px;
   background-color: red;
 }
+
+
+@media(max-width: 700px){
+  .your-quizzes{
+    display: grid;
+    max-width: 75vw;
+    margin: 0 auto 0 auto;
+    grid-auto-flow: row;
+  }
+  .quizcard{
+    max-width: 50vw;
+  }
+  .quizcard-button{
+    width: 15vw;
+    
+  }
+}
+
+/*
+@media (max-width: 700px) {
+  .grid-adjustable-columns {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+
+*/
+
+
 
 
 
@@ -299,4 +334,28 @@ h5{
 /* margin bottom */
 .mb{
   margin-bottom: auto;
+}
+
+
+
+
+
+
+
+
+/* learn css */
+.learn-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: lightgray;
+  height: 80vh;
+  gap: 5rem;
+
+}
+.learn-title{
+  font-size: 4rem;
+  padding:4vh;
+
 }
