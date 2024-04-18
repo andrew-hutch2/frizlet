@@ -14,14 +14,14 @@ const page = ({params}) => {
     }
     fetchQuizzes();
     }, []);
-    console.log(quizzes)
-    const quiz = quizzes && quizzes[0]?.quiz;
     
+    const quiz = quizzes && quizzes[0]?.quiz;
+    const length = quiz?.length
   return (
     
     <div className='learn-container'>
         <h1 className='learn-title'> { quizzes && quizzes[0]?.title}</h1>
-        <LearnCard/>
+        <LearnCard quiz={quiz} />
     </div>
     
   )
