@@ -28,8 +28,8 @@ const QuizCard = ({title, quiz, creator, quiz_id, setRefreshQuizzes}) => {
       <p className='mb'> {quiz.length} terms</p>
       <div className='quizcard-buttons'>
         <button className='quizcard-button'><Link  href={"/study/" + quiz_id}>Study</Link></button>
-        <button onClick={handleDelete} className='quizcard-button'>Delete</button>
         <button className='quizcard-button'> <Link href={"learn/" + quiz_id}>Learn</Link> </button>
+        <button onClick={handleDelete} className='quizcard-button'>Delete</button>
       </div>
     </article>
   )
