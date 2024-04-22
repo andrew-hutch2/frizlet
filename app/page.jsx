@@ -1,10 +1,22 @@
 "use client"
 
 import Link from "next/link";
-import {useSession } from "next-auth/react";
+import {useSession, getProviders } from "next-auth/react";
+import { useState, useEffect } from "react";
 import Quizzes from '@components/Quizzes';
+  
+
 function Home() {
   const { data: session } = useSession();
+  const [providers, setProviders] = useState(null);
+ 
+
+  useEffect(() => {
+    (async () => {
+      const res = await getProviders();
+      setProviders(res);
+    })();
+  }, []);
   return (
     <>
     { session ? (
@@ -25,6 +37,7 @@ function Home() {
       //homepage code for "guest" user (not logged in)
       <div className="guest-container">
         <h2 className="guest-title"> Log in with google to continue </h2>
+        <h4> {!providers && "If you cannot see the login button in top right please refresh until you can/"}</h4>
       </div>
       
     )

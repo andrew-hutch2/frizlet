@@ -17,7 +17,7 @@ const page = ({params}) => {
     }, []);
     
   return (
-    <div>
+    <div className='study-container2'>
       <h1 className='study-title'> {quizzes[0] && quizzes[0].title}</h1>
       <FlashCards quiz={quizzes}/>
     

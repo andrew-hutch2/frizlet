@@ -4,7 +4,8 @@ const LearnCard = ({quiz}) => {
   const length = quiz?.length
   const [quizIndex, setQuizIndex] = useState(0)
   const [showanswer, setShowAnswer] = useState(false);
-  const [learn,setLearn] = useState([])
+  const [learn,setLearn] = useState([]);
+  const [showCheck, setShowCheck] = useState(false);
   
   
   //get 3 random numbers for the incorrect answer
@@ -91,6 +92,18 @@ const LearnCard = ({quiz}) => {
         return "red"
       }
     }
+
+    function handleClick(event){
+      event.preventDefault();
+      setShowAnswer(true)
+      console.log("this is printing", event.target.value);
+      if(event.target.value === learn[quizIndex]?.correct_answer){
+        setShowCheck(true)
+      }else{
+        setShowCheck(false)
+      }
+      /* ()=>setShowAnswer(true) */
+    }
   
   return (
     <div className="learn-container">
@@ -100,33 +113,34 @@ const LearnCard = ({quiz}) => {
         {showanswer ? 
         (
           
-          <div>
+          <div className='back'>
             <h3 className='learn-question'> {learn[quizIndex]?.question}</h3>
             <div className='learn-answers'>
             <button onClick={()=>setShowAnswer(false)} className={'learn-answer ' + color(0)}>{learn[quizIndex]?.[randomize[0]]}</button>
             <button onClick={()=>setShowAnswer(false)} className={'learn-answer ' + color(1)}>{learn[quizIndex]?.[randomize[1]]}</button>
             <button onClick={()=>setShowAnswer(false)} className={'learn-answer ' + color(2)}>{learn[quizIndex]?.[randomize[2]]}</button>
             <button onClick={()=>setShowAnswer(false)} className={'learn-answer ' + color(3)}>{learn[quizIndex]?.[randomize[3]]}</button>
-            <p> </p>
+            
             </div>
+            {showCheck ? <p className='check'>correct</p> : <p className='check'> incorrect</p>}
           </div>
         )
         :
         (
           
-          <div>
+          <div className='front'>
             <h3 className='learn-question'> {learn[quizIndex]?.question}</h3>
               <div className='learn-answers'>
-              <button onClick={()=>setShowAnswer(true)}className='learn-answer'>{learn[quizIndex]?.[randomize[0]]}</button>
-              <button onClick={()=>setShowAnswer(true)}className='learn-answer'>{learn[quizIndex]?.[randomize[1]]}</button>
-              <button onClick={()=>setShowAnswer(true)}className='learn-answer'>{learn[quizIndex]?.[randomize[2]]}</button>
-              <button onClick={()=>setShowAnswer(true)}className='learn-answer'>{learn[quizIndex]?.[randomize[3]]}</button>
+              <button value={learn[quizIndex]?.[randomize[0]]} onClick={handleClick}className='learn-answer'>{learn[quizIndex]?.[randomize[0]]}</button>
+              <button value={learn[quizIndex]?.[randomize[1]]} onClick={handleClick}className='learn-answer'>{learn[quizIndex]?.[randomize[1]]}</button>
+              <button value={learn[quizIndex]?.[randomize[2]]} onClick={handleClick}className='learn-answer'>{learn[quizIndex]?.[randomize[2]]}</button>
+              <button value={learn[quizIndex]?.[randomize[3]]} onClick={handleClick}className='learn-answer'>{learn[quizIndex]?.[randomize[3]]}</button>
             </div>
           </div>
         )
       }
       
-       {/*  <button className="get-answer" onClick={flipcard}>get {showanswer ? "question" : "answer"}</button> */}
+       
       </div>
       <span className="right caret" onClick={increment_up}>^</span>
     </div>

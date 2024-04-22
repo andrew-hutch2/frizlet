@@ -26,6 +26,9 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  padding-bottom: 2vh;
+  
 }
 
 button{
@@ -69,11 +72,15 @@ button:hover{
   padding: 2rem;
   display: flex;
   align-items: center;
-  background-color: lightgrey;
-  height: 80vh;
+  background: linear-gradient(to bottom, #FFFFFF 0%,  #4B9CD3 200%);
+  min-height: 80vh;
+  height: auto;
   gap: 2vh;
+  padding-bottom: 2vh;
 }
-
+.test{
+  background-color: rgba(5,5,55,.75)
+}
 
 h1{
   font-size: 8vh;
@@ -96,10 +103,13 @@ h5{
 }
 
 .guest-container{
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100vh;
   background-color: lightgrey;
   display: flex;
-  justify-content: center; 
+  align-items: center;
   padding: 5vh;
 }
 
@@ -193,13 +203,17 @@ h5{
   background-color: white;
   margin: 5vh 2vw 0 2vw;
   border-radius: 5%;
+  box-shadow: 0px 0px 2px .5px black;
 }
 
 
 
 .quizzes{
-  background-color: lightgrey;
+  /* background-color: white; */
   width: 100vw;
+  min-height: 80vh;
+  height: auto;
+  
   
 }
 .quizcard-buttons{
@@ -209,10 +223,20 @@ h5{
   align-self: stretch;
   
 }
+.quizcard-link{
+  background-color: none;
+  /* padding: 0 2vw 0 2vw; */
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: .4vh 0 .4vh 0;
+  align-items: center;
+  justify-content: center;
+}
 .quizcard-button{
   width:6vw;
   height: 35px;
-  background-color: Black;
+  background-color: black;
   color: white;
 }
 .quizcard-button:hover{
@@ -265,11 +289,12 @@ h5{
   flex-direction: row;
   justify-content: center;
   align-items:center;
-  background-color: lightgrey;
+  background-color: none;
   gap: 2vw;
   
 }
 .flashcard{
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 40vw;
@@ -287,15 +312,19 @@ h5{
 
 .study-title{
   display: flex;
-  background-color: lightgrey;
+  background-color: none;
   justify-content: center;
   padding-top: 6vh;
+}
+.study-container2{
+  background: linear-gradient(to bottom, #FFFFFF 0%,  #4B9CD3 250%);
 }
 
 @media (max-width: 700px){
   .flashcard{
     width: 80vw;
     height: 50vh;
+    font-size: 24px;
   }
 }
 
@@ -322,10 +351,14 @@ h5{
 }
 
 .get-answer{
+  display: flex;
   width: auto;
   padding: 1.5vw;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 10px;
+  
   
 }
 .answer-question{
@@ -350,13 +383,13 @@ h5{
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  background-color: lightgray;
+  background-color: none;
   height: 80vh;
   gap: 5rem;
 
 }
 .learn-title{
-  background-color: lightgrey;
+  background-color: none;
   font-size: 4rem;
   padding:4vh;
   text-align:center;
@@ -370,16 +403,22 @@ h5{
   flex-direction: row;
   justify-content: center;
   align-items:center;
-  background-color: lightgrey;
+  background-color: none;
   gap: 2vw;
+}
+.learn-container2{
+  background: linear-gradient(to bottom, #FFFFFF 0%,  #4B9CD3 250%);
+
+  /* background: rgb(75,156,211);
+background: linear-gradient(0deg, rgba(75,156,211,1) 0%, rgba(87,163,214,1) 17%, rgba(224,238,247,1) 66%, rgba(255,255,255,1) 100%); */
 }
 
 .learn-card{
   display: flex;
   flex-direction: column;
   width: 70vw;
-  height: 50vh;
-  min-height: 40vh;
+  height: auto;
+  min-height: 45vh;
   box-shadow: 0px 0px 4px 2px black;
   align-items: center;
   /* justify-content: center; */
@@ -404,13 +443,21 @@ h5{
   justify-content: center;
   align-items: center;
 
+
+  transition-duration: .15s;
+
 }
+
+
+
 .learn-answer:hover{
   background-color: white;
   color: lightgray;
+  box-shadow: 0px 0px 2px .5px black;
 }
 .learn-answer:active{
   border: solid black;
+  transform: scale(.95);
 }
 
 .learn-question{
@@ -433,10 +480,14 @@ h5{
   .learn-card{
     height:auto;
   }
+  .learn-question{
+    font-size: 1.25rem;
+  }
   .learn-answer{
     margin-left:auto;
     margin-right: auto;
     width: 60vw;
+    font-size: 1rem;
   }
 }
 
@@ -458,3 +509,8 @@ h5{
   color: black;
 }
 
+.check{
+  text-align: center;
+  
+  
+}

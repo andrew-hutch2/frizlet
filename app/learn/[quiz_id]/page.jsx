@@ -19,10 +19,10 @@ const page = ({params}) => {
     const length = quiz?.length
   return (
     
-    <div >
+    <section className='learn-container2'>
         <h1 className='learn-title'> { quizzes && quizzes[0]?.title}</h1>
         <LearnCard quiz={quiz} />
-    </div>
+    </section>
     
   )
 }

@@ -27,8 +27,8 @@ const QuizCard = ({title, quiz, creator, quiz_id, setRefreshQuizzes}) => {
       <h5> Preview: {quiz[0] && quiz[0].question} : {quiz[0] && quiz[0].answer}</h5>
       <p className='mb'> {quiz.length} terms</p>
       <div className='quizcard-buttons'>
-        <button className='quizcard-button'><Link  href={"/study/" + quiz_id}>Study</Link></button>
-        <button className='quizcard-button'> <Link href={"learn/" + quiz_id}>Learn</Link> </button>
+        <button className='quizcard-button'><Link  className="quizcard-link" href={"/study/" + quiz_id}>Study</Link></button>
+        <button className='quizcard-button'> <Link className="quizcard-link" href={"learn/" + quiz_id}>Learn</Link> </button>
         <button onClick={handleDelete} className='quizcard-button'>Delete</button>
       </div>
     </article>
