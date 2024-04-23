@@ -20,7 +20,11 @@
   @apply flex justify-between items-center;
 } 
 
-
+*{
+  /* font-family:  "Verdana", Sans-serif; */
+  /* font-family:  "Georgia", Serif; */
+  font-family:  "Lucida Handwriting", Cursive;
+}
 nav{
   padding-top: 2rem;
   display: flex;
@@ -46,6 +50,8 @@ button:hover{
 
 .logo_text{
     font-size: 40px;
+    color: rgba(30,30,30);
+    letter-spacing: 2px;
 }
 
 .btn{
@@ -61,6 +67,10 @@ button:hover{
 
 .sign-out{
   margin: 0rem;
+}
+.createquiz:hover{
+  background-color: lightgray;
+  color: black;
 }
 
 .profile-img{
@@ -168,12 +178,20 @@ h5{
   background-color: #72A0C1;
  
 }
+.createquiz-example{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .quiz-title{
+  
   border: 2px solid black;
   border-radius: 5%;
   width: 250px;
-  margin-left: 1vw;
-  margin-right: 5vw;
+  /* margin-left: 1vw;
+  margin-right: 5vw; */
+  
 }
 
 .your-quizzes{
@@ -186,8 +204,15 @@ h5{
   justify-content: center;
   
 }
-
+.bar-seperate{
+  margin-top: 2vh;
+  width: 90%;
+  height: 5px;
+  border-top: 2px solid lightgray;
+  line-height: 80%;
+}
 .your-quizzes-title{
+  margin-top: 2vh;
   text-align: center
 }
 
