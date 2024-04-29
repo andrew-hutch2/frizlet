@@ -1,8 +1,8 @@
 import {connectToDB} from '@utils/database';
 import Quiz from '@models/quiz'
-import {getServerSession} from 'next-auth';
-/* import { handler } from "../auth/[...nextauth]/route"; */
-import {handler} from "../auth/[...nextauth]/route";
+
+
+
 
 
 export const GET = async (req) => {
