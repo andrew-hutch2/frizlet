@@ -30,7 +30,7 @@ const Nav = () => {
           alt='logo'
           width={90}
           height={90}
-          className='object-contain'
+          className=".object-contain12"
         />
         <p className='logo_text'>Frizlet</p>
       </Link>

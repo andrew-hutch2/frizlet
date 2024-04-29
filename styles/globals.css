@@ -136,6 +136,11 @@ h5{
   margin-right: 0;
 }
 
+.object-contain12{
+  width: 90;
+  height: auto;
+}
+
 .dropdown{
   padding-right: 2vw;
   padding-bottom: 1vh;

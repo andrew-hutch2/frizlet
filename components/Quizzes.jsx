@@ -19,7 +19,7 @@ const Quizzes = () => {
         <h2 className='your-quizzes-title'> Your Quizzes</h2>
         <div className='your-quizzes'>
           {/* <h3>{quizzes.map(val => val?.title)}</h3> */}
-          {quizzes.map(val => <QuizCard setRefreshQuizzes={setRefreshQuizzes} quiz_id={val?._id} creator={val?.creator} title={val?.title} quiz={val?.quiz}/>)}
+          {quizzes.map(val => <QuizCard setRefreshQuizzes={setRefreshQuizzes} key={val?._id} quiz_id={val?._id} creator={val?.creator} title={val?.title} quiz={val?.quiz}/>)}
         </div>
     </section>
   )

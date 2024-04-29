@@ -30,13 +30,10 @@ const LearnCard = ({quiz}) => {
     }
     //set learn values once at the beginning of render
   useEffect(()=>{
-    console.log("learn is being updated")
+
     setLearn(do_learn())
     
   }, [quiz])
-  
-  
-  console.log(learn)
 
 
   useEffect(() => {
@@ -84,7 +81,6 @@ const LearnCard = ({quiz}) => {
     useEffect(()=>{
       setRandomize(randomizechoices);
     }, [quizIndex])
-    console.log(randomize[0]);
     function color(n){
       if(randomize[n] == "correct_answer"){
         return "green"
@@ -96,13 +92,11 @@ const LearnCard = ({quiz}) => {
     function handleClick(event){
       event.preventDefault();
       setShowAnswer(true)
-      console.log("this is printing", event.target.value);
       if(event.target.value === learn[quizIndex]?.correct_answer){
         setShowCheck(true)
       }else{
         setShowCheck(false)
       }
-      /* ()=>setShowAnswer(true) */
     }
   
   return (
