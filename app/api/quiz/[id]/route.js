@@ -1,10 +1,6 @@
 import {connectToDB} from '@utils/database';
 import Quiz from '@models/quiz'
 
-
-
-
-
 export const GET = async (req) => {
     try{
     
