@@ -10,7 +10,9 @@ const Quizzes = () => {
     const fetchQuizzes = async () => {
         const response = await fetch('/api/quiz');
         const data = await response.json();
+        
         setQuizzes(data.filter( quiz => quiz.creator == session?.user.id));
+        console.log(quizzes);
     }
     fetchQuizzes();
     }, [refreshQuizzes]);

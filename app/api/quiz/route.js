@@ -3,7 +3,7 @@ import Quiz from '@models/quiz'
 
 
 
-export const GET = async (req, res) => {
+export const GET = async (req) => {
     /* console.log("this is the session", session) */
     try{
     
