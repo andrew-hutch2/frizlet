@@ -3,8 +3,7 @@ import Quiz from '@models/quiz';
 
 export const DELETE = async (req) => {
     const {quiz_id} = await req.json()
-    console.log(quiz_id)
-    console.log(Quiz._id)
+    
     const quizzes = await Quiz.find({_id: quiz_id})
     /* a = await Quiz.remove(quizzes)
     console.log(a) */
