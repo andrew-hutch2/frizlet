@@ -3,7 +3,7 @@ import Quiz from '@models/quiz'
 
 
 
-export const GET = async (req) => {
+export const GET = async (req, res) => {
     /* console.log("this is the session", session) */
     try{
     
@@ -11,9 +11,13 @@ export const GET = async (req) => {
         console.log("This is the session", session) */
         await connectToDB();
 
-        const quizzes = await Quiz.find({}).populate('creator');
-        /* const quizzes = await Quiz.find({}) */
+        /* const quizzes = await Quiz.find({}).populate('creator'); */
+        const quizzes = await Quiz.find({})
         /* console.log(quizzes) */
+        /* res.setHeader(
+            "Cache-Control",
+            "nocache, no-store, max-age=0, must-revalidate"
+        ); */
         return new Response(JSON.stringify(quizzes), {
             status: 200
         })

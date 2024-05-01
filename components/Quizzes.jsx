@@ -7,11 +7,11 @@ const Quizzes = () => {
     const [refreshQuizzes, setRefreshQuizzes] = useState(0);
     /* console.log(quizzes, session) */
     const fetchQuizzes = async () => {
-      const response = await fetch('/api/quiz');
+      const response = await fetch('/api/quiz', {cache: "no-store"});
       const data = await response.json();
       
-      /* setQuizzes(data.filter( quiz => quiz.creator == session?.user.id)); */
-      setQuizzes(data)
+      setQuizzes(data.filter( quiz => quiz.creator == session?.user.id));
+      /* setQuizzes(data) */
       console.log(quizzes);
   }
 
