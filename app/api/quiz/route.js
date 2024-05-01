@@ -11,8 +11,8 @@ export const GET = async (req) => {
         console.log("This is the session", session) */
         await connectToDB();
 
-        /* const quizzes = await Quiz.find({}).populate('creator'); */
-        const quizzes = await Quiz.find({})
+        const quizzes = await Quiz.find({}).populate('creator');
+        /* const quizzes = await Quiz.find({}) */
         /* console.log(quizzes) */
         return new Response(JSON.stringify(quizzes), {
             status: 200
