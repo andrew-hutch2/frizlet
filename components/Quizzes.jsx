@@ -1,17 +1,17 @@
 import { useState, useEffect} from 'react'
 import QuizCard from './QuizCard'
 import {useSession } from "next-auth/react";
-export const fetchCache = 'force-no-store';
+
 const Quizzes = () => {
   const { data: session } = useSession();
     const [quizzes, setQuizzes] = useState([]);
     const [refreshQuizzes, setRefreshQuizzes] = useState(0);
     /* console.log(quizzes, session) */
     const fetchQuizzes = async () => {
-      const response = await fetch('/api/quiz', {cache: "no-store"});
+      const response = await fetch('/api/quiz');
       const data = await response.json();
-      
-      setQuizzes(data.filter( quiz => quiz.creator == session?.user.id));
+      setQuizzes(data)
+      //setQuizzes(data.filter( quiz => quiz.creator == session?.user.id));
       /* setQuizzes(data) */
       console.log(quizzes);
   }
