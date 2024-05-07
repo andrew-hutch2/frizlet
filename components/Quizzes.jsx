@@ -1,6 +1,7 @@
 import { useState, useEffect} from 'react'
 import QuizCard from './QuizCard'
 import {useSession } from "next-auth/react";
+export const fetchCache = 'force-no-store';
 const Quizzes = () => {
   const { data: session } = useSession();
     const [quizzes, setQuizzes] = useState([]);
