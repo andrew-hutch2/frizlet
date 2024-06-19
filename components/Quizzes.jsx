@@ -6,15 +6,16 @@ const Quizzes = () => {
   const { data: session } = useSession();
   const [quizzes, setQuizzes] = useState([]);
   const [refreshQuizzes, setRefreshQuizzes] = useState(0);
-  const user_id = session?.user.id
+
+
     useEffect(() => {
       async function fetchQuizzes() {
         const response = await fetch('/api/quiz');
+        
         const json = await response.json();
-        console.log(quizzes)
-        setQuizzes(json.filter( quiz => quiz.creator == user_id));
-        /* setQuizzes(prev => console.log("this is prev", prev)) */
-      } 
+        console.log("json",json)
+        setQuizzes(json);
+     }
       fetchQuizzes();
 
     }, [refreshQuizzes]);
