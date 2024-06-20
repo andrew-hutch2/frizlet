@@ -66,7 +66,7 @@ function FlashCards({quiz}) {
   return (
     <div className="flashcards-container">
       <span className="left caret" onClick={increment_down}>^</span>
-      <div className="flashcard">
+      <div onClick={flipcard} className="flashcard">
         
         <p className="answer-question">{showanswer ? 
         (questions && questions[quizIndex]?.answer)

@@ -81,11 +81,22 @@ button:hover{
   color: black;
 }
 
+
 .profile-img{
   margin-right: 2rem;
 }
-
-
+.explain-text{
+  width: 70vw;
+}
+@media(min-width: 701px){
+  .explain-title{
+    margin-right: 3vw;
+  }
+  .explain-text{
+    max-width:40vw;
+    margin-left: 5vw;
+  }
+}
 .home-main{
   padding: 2rem;
   display: flex;
@@ -116,9 +127,7 @@ h5{
   font-size: 2vh;
 }
 
-.perw60{
-  width: 70%;
-}
+
 
 .guest-container{
   display: flex;
@@ -234,7 +243,7 @@ h5{
   text-align: center;
   min-width: 25vw;
   max-width: 25vw;
-  min-height: 400px;
+  min-height: 350px;
   height: auto;
   text-overflow: ellipsis;
   padding-bottom: 1vh;
@@ -298,9 +307,15 @@ h5{
   height: 100px;
   background-color: red;
 }
-
-
-@media(max-width: 700px){
+@media(max-width: 500px){
+  .pattern{
+    font-size: 4vw;
+  }
+  .quiz-title{
+    width:190px;
+  }
+}
+@media(max-width: 1000px){
   .your-quizzes{
     display: grid;
     max-width: 75vw;
@@ -437,8 +452,12 @@ h5{
 }
 
 
-
-
+@media(max-width:500px){
+  .bottom-space{
+    height: 100px;
+  }
+  
+}
 
 
 

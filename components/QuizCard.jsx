@@ -25,7 +25,7 @@ const QuizCard = ({title, quiz, creator, quiz_id, setRefreshQuizzes}) => {
   return (
     <article className='quizcard'>
       <h2 className='quizcard-title'> {title}</h2>
-      <h4 className='quizcard-preview'> Preview: {quiz[0] && quiz[0].question} : {quiz[0] && quiz[0].answer}</h4>
+      <h5 className='quizcard-preview'> Preview: {quiz[0] && quiz[0].question} : {quiz[0] && quiz[0].answer}</h5>
       
       <div className='card-bottom'>
         <h4 className='mb margin-t-auto'> {quiz.length} terms</h4>

@@ -53,11 +53,11 @@ const handleSubmit = async(e) => {
           <div className='create-quiz-container'>
               <h2> Copy and Paste flash cards</h2>
                 {/* <pre> Who was the first president of the United State of America {"\n"} George Washington {"\n"} Who was the sixteenth president of the United State of America {"\n"} Abraham Lincoln </pre> */}
-                <pre> Make sure to put follow the pattern: {"\n"} question  (enter to new line) {"\n"} answer (enter to new line) {"\n"} question (enter to new line) {"\n"} answer (new line) etc. to insure the quiz is created correctly</pre>
+                <pre className="pattern"> Make sure to put follow the pattern: {"\n"} question  (enter to new line) {"\n"} answer (enter to new line) {"\n"} question (enter to new line) {"\n"} answer (new line) etc. {"\n"} to insure the quiz is created correctly {"\n"} Note: Make sure you don't copy and paste any ads</pre>
               <label >Title of quiz: {" "}
                 <input className='quiz-title' value={formData.title} onChange={(e)=> setFormData({...formData, "title": e.target.value})}></input>
               </label>
-              <textarea autoFocus name="flashcards" value={formData.flashcards} onChange={(e)=> setFormData({...formData, "flashcards": e.target.value})} placeholder={"Example: \n Who was the first president of the United State of America \n George Washington \n Who was the sixteenth president of the United State of America \n Abraham Lincoln"}className='quiz-textarea'></textarea>
+              <textarea autoFocus name="flashcards" value={formData.flashcards} onChange={(e)=> setFormData({...formData, "flashcards": e.target.value})} placeholder={"Example: \n Who was the first president of the United States of America \n George Washington \n Who was the sixteenth president of the United States of America \n Abraham Lincoln"}className='quiz-textarea'></textarea>
               <button  className="create-quiz-button"  type="submit">Create Quiz</button>
           </div>
         
