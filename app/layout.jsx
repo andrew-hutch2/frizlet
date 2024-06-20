@@ -4,7 +4,7 @@ import Provider from "@components/Provider";
   
 export const metadate = {
     title: "Frizlet",
-    description: " Free way to study and learn easily"
+    description: " Free way to study and learn simply"
 }
 
 function RootLayout({children}) {

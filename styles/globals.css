@@ -57,7 +57,7 @@ button:hover{
 }
 
 .logo_text{
-    font-size: 4vw;
+    font-size: 3.5vw;
     color: rgba(80,80,80);
     letter-spacing: 2px;
 }
@@ -66,8 +66,8 @@ button:hover{
   display:flex;
   background-color: black;
   color: white;
-  width: 100px;
-  height: 50px;
+  width: 140px;
+  height: 60px;
   border-radius: 20%;
   justify-content: center;
   align-items: center;
@@ -178,7 +178,6 @@ h5{
   align-items: center;
   gap: 2vh;
 }
-.new-quiz
 
 .quiz-textarea{
   width: 70vw;
@@ -211,12 +210,11 @@ h5{
 .your-quizzes{
   display: flex;
   flex-direction: row;
-  
-  align-items: center;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: center; 
+  flex-wrap: wrap; 
   justify-content: center;
-  
+  gap: 2rem;
+  padding:0;
 }
 .bar-seperate{
   margin-top: 2vh;
@@ -236,31 +234,43 @@ h5{
   text-align: center;
   min-width: 25vw;
   max-width: 25vw;
-  min-height: 300px;
+  min-height: 400px;
   height: auto;
+  text-overflow: ellipsis;
   padding-bottom: 1vh;
   background-color: white;
-  margin: 5vh 2vw 0 2vw;
+  margin: 5vh 0vw 0 0vw;
   border-radius: 5%;
   box-shadow: 0px 0px 2px .5px black;
 }
+.quizcard-preview{
+  width:95%;
+  margin-left: .5vw;
+ /*  background: #DDEEFF; */
 
+}
+.quizcard-title{
 
-
+}
 .quizzes{
-  /* background-color: white; */
   width: 100vw;
   min-height: 80vh;
   height: auto;
-  
-  
 }
 .quizcard-buttons{
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
   
+}
+.card-bottom{
+  display: flex;
+  flex-direction: column;
+  padding-top:1vh;
+  margin-top: auto;
+  align-self: stretch;
 }
 .quizcard-link{
   background-color: none;
@@ -298,23 +308,40 @@ h5{
     grid-auto-flow: row;
   }
   .quizcard{
-    max-width: 50vw;
+    max-width: 100vw;
+    min-height:250px;
   }
   .quizcard-button{
-    width: 15vw;
+    width: 20vw;
     
   }
-}
+  .logo_text{
+    font-size: 5.5vw;
+    text-align: center;
+  }
+  .logo-img{
+    height:55px;
+    width: 70px;
+  }
+  .home-main{
+    padding: 0;
 
-/*
-@media (max-width: 700px) {
-  .grid-adjustable-columns {
-    display: grid;
-    grid-auto-flow: row;
+  }
+  .explain-title{
+    margin-left: 8vw;
   }
 }
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.explain-title{
 
-*/
+  color: #4B8CF3 ;
+}
+
 
 
 

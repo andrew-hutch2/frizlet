@@ -24,14 +24,14 @@ const Nav = () => {
 
   return (
     <nav className='flex-between w-full '>
-      <Link href='/' className='flex gap-2 flex-center'>
+      <Link href='/' className='flex logo gap-2 flex-center'>
         <Image
           src='/images/frizlet-logo1.jpg'
           alt='logo'
           width="0"
           height="0"
-          sizes="10vw"
-          className="w-full h-auto"
+          sizes="8vw"
+          className="w-full h-auto logo-img"
         />
         <p className='logo_text'>Frizlet</p>
       </Link>
@@ -43,9 +43,9 @@ const Nav = () => {
               Create Quiz
             </Link>
 
-            <button type='button' onClick={() =>{
+            <button type='button'onClick={() =>{
               signOut()
-              }} className='sign-out'>
+              }} className='sign-out btn'>
               Sign Out
             </button>
 
@@ -53,8 +53,8 @@ const Nav = () => {
               <Image
                 src={session?.user.image}
                 /* src='/images/frizlet-logo1.jpg' */
-                width={45}
-                height={45}
+                width={55}
+                height={55}
                 className='rounded-full profile-img'
                 alt='profile'
               />

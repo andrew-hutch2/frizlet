@@ -25,12 +25,12 @@ callbacks: {
         session.user.id = sessionUser._id.toString();
         return session;
     },
-    async jwt({ token, user, account, profile }) {
+    /* async jwt({ token, user, account, profile }) {
         if (user) {
           token.id = user.id; // Persisting user ID in the token
         }
         return token;
-      },
+      }, */
       
     async signIn({ profile}){
         try{
@@ -54,7 +54,7 @@ callbacks: {
             return false;
         }
     }
-},pages: {
+}/* ,pages: {
     signIn: '/', // Custom sign-in page
     signOut: '/', // Custom sign-out page
     error: '/', // Error code passed in query string as ?error=
@@ -65,9 +65,11 @@ callbacks: {
     jwt: true,
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
+  */
+ ,
   jwt: {
     secret: process.env.JWT_SECRET, // Use the JWT secret from environment variables
-  },
+  }, 
    }
 
 export const handler = NextAuth(authOptions)

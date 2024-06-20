@@ -20,7 +20,7 @@ function Home() {
   return (
     <>
     <section className="w-full flex-col home-main">
-      <h2> Quick Guide to create a quiz</h2>
+      <h2 className='explain-title'> Quick Guide to create a quiz</h2>
       <div className="perw60">
         <p> Simply click the link below and copy and paste your quiz from the website that starts with a Q and ends with a uizlet. Then you will have unlimited free learn to study with.</p>
         <p> login with your google account to save quizzes</p>
