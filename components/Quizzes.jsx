@@ -1,9 +1,9 @@
 import { useState, useEffect} from 'react'
 import QuizCard from './QuizCard'
-import {useSession } from "next-auth/react";
+/* import {useSession } from "next-auth/react"; */
 
 const Quizzes = () => {
-  const { data: session } = useSession();
+
   const [quizzes, setQuizzes] = useState([]);
   const [refreshQuizzes, setRefreshQuizzes] = useState(0);
 
@@ -11,9 +11,7 @@ const Quizzes = () => {
     useEffect(() => {
       async function fetchQuizzes() {
         const response = await fetch('/api/quiz');
-        
         const json = await response.json();
-        console.log("json",json)
         setQuizzes(json);
      }
       fetchQuizzes();

@@ -28,9 +28,10 @@ const Nav = () => {
         <Image
           src='/images/frizlet-logo1.jpg'
           alt='logo'
-          width={90}
-          height={90}
-          className=".object-contain12"
+          width="0"
+          height="0"
+          sizes="10vw"
+          className="w-full h-auto"
         />
         <p className='logo_text'>Frizlet</p>
       </Link>
